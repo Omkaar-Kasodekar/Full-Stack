@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiplayer Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Tic-Tac-Toe</h1>
+    <div>
+      <input type="text" id="roomInput" placeholder="Enter Room Code">
+      <button onclick="joinRoom()">Join Game</button>
+    </div>
+    <h2 id="status">Waiting for opponent...</h2>
+    <div class="board" id="board"></div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
