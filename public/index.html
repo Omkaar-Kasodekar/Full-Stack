@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Multiplayer Tic-Tac-Toe</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neon Tic-Tac-Toe</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <div class="container">
-    <h1>Tic-Tac-Toe</h1>
-    <div>
-      <input type="text" id="roomInput" placeholder="Enter Room Code">
+    <h1>Neon Tic-Tac-Toe</h1>
+    
+    <div class="join-section">
+      <input type="text" id="roomInput" placeholder="Enter Room Code" />
       <button onclick="joinRoom()">Join Game</button>
     </div>
-    <h2 id="status">Waiting for opponent...</h2>
+    
+    <h2 id="status">Enter a room code to start</h2>
+
     <div class="board" id="board"></div>
+    
+    <footer>Made with 💾 by Omkaar</footer>
   </div>
+
   <script src="/socket.io/socket.io.js"></script>
   <script src="script.js"></script>
 </body>

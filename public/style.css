@@ -1,36 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: 'Press Start 2P', cursive;
+  background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+  color: #00ffcc;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
 .container {
+  background: rgba(0, 0, 0, 0.85);
+  border: 4px solid #00ffcc;
+  border-radius: 16px;
+  padding: 30px;
   text-align: center;
+  width: 360px;
+  box-shadow: 0 0 30px #00ffcc;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #ff4081;
+  text-shadow: 0 0 4px #ff4081;
+}
+
+input#roomInput {
+  padding: 10px;
+  width: 80%;
+  border: 2px solid #00ffcc;
+  background: black;
+  color: #00ffcc;
+  font-family: 'Press Start 2P', cursive;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+button {
+  padding: 12px 20px;
+  background: #ff4081;
+  color: black;
+  font-family: 'Press Start 2P', cursive;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  box-shadow: 0 0 10px #ff4081;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #ff77aa;
+  box-shadow: 0 0 20px #ff77aa;
+}
+
+#status {
+  margin-top: 15px;
+  color: #00ffcc;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .board {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-gap: 5px;
-  margin-top: 20px;
+  gap: 10px;
+  margin-top: 25px;
+  justify-content: center;
 }
 
 .cell {
   width: 100px;
   height: 100px;
-  background: white;
-  font-size: 36px;
+  background: #111;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  border-radius: 12px;
+  font-size: 32px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border: 2px solid #333;
+  box-shadow: inset 0 0 10px #00ffcc;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.cell:hover {
+  background-color: #222;
+  transform: scale(1.05);
 }
 
 .cell.disabled {
   cursor: not-allowed;
-  background-color: #eee;
+  color: #666;
+  background-color: #222;
+  box-shadow: none;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 8px;
+  color: #999;
 }
