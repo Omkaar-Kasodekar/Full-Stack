@@ -109,3 +109,21 @@ footer {
   font-size: 8px;
   color: #999;
 }
+
+#playAgainBtn {
+  margin-top: 15px;
+  background-color: #00ffcc;
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #00ffcc;
+  cursor: pointer;
+}
+
+#playAgainBtn:hover {
+  background-color: #66fff2;
+  box-shadow: 0 0 20px #66fff2;
+}

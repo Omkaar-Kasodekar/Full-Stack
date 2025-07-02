@@ -55,17 +55,22 @@ socket.on("win", (winner) => {
   document.getElementById("status").innerText =
     winner === symbol ? "You win!" : "You lose!";
   disableBoard();
+  document.getElementById("playAgainBtn").style.display = "inline-block";
 });
+
 
 socket.on("draw", () => {
   document.getElementById("status").innerText = "It's a draw!";
   disableBoard();
+  document.getElementById("playAgainBtn").style.display = "inline-block";
 });
 
 socket.on("playerLeft", () => {
   document.getElementById("status").innerText = "Opponent left. Game ended.";
   disableBoard();
+  document.getElementById("playAgainBtn").style.display = "inline-block";
 });
+
 
 socket.on("roomError", (msg) => {
   alert(msg);
@@ -85,4 +90,14 @@ function disableBoard() {
   document.querySelectorAll(".cell").forEach((cell) => {
     cell.classList.add("disabled");
   });
+}
+
+function resetGame() {
+  document.getElementById("playAgainBtn").style.display = "none";
+  document.getElementById("status").innerText = "Enter a room code to start";
+  document.getElementById("roomInput").value = "";
+  document.getElementById("board").innerHTML = "";
+  symbol = "";
+  myTurn = false;
+  room = "";
 }
